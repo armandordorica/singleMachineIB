@@ -10,7 +10,8 @@
 
 %All the values are in p.u.
 
-clearvars
+clear all
+clear vars 
 %Input your data here
 S_IB = 0.93 +0.27i ;  
 V_IB = 1.03 ;

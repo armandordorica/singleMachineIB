@@ -72,13 +72,25 @@ end
 % figure, plot(time_elapsed, w), title('Speed vs Time'), xlabel('Time(s)'), ylabel('Speed')
 % figure, plot(time_elapsed, Pel), title('Electrical Power vs Time'), xlabel('Time(s)'), ylabel('Electrical Power')
 
-plot(time_elapsed, Pel), title('Electrical Power vs Time'), xlabel('Time(s)'), ylabel('Electrical Power(VA)')
+% plot(time_elapsed, Pel), title('Electrical Power vs Time'), xlabel('Time(s)'), ylabel('Electrical Power(VA)')
 % plot(time_elapsed, w), title('Speed vs Time'), xlabel('Time(s)'), ylabel('Speed(rad/s)')
 
 % plot(time_elapsed, delta), title('Angle vs Time'), xlabel('Time(s)'), ylabel('Angle (Radians)')
 
+%2.1 
+x=linspace(0,4, 100)
+y=zeros(1,100); 
+plot(delta, Pel, x, y), title('Electrical Power vs Angle'), xlabel('Angle (rad)'), ylabel('Electrical Power(VA)')
+ xlim([0,10])
+ xlim([0,3.5])
+% hold on; 
+% plot (x,y)
+% 
+% syms delta 
+% resultDelta = solve(Pel ==0) 
 
-% xlim([-100, 100])
+
+
 % plot(log(time_elapsed), Pel)
 
 

@@ -63,16 +63,22 @@ for t = 0:dt:t_fin
     Pe = Ep*V_IB/Xeq*sin(delta_next_step_p)+D*(w_next_step_p - 1); %Pe - #2
     fw2 = 1/2/H*(Pm - Pe); 
     w(i+1) = w(i)+0.5*dt*(fw1+fw2);
-    Pse(i+1) = Ep*V_IB/Xeq*sin(delta(i+1)); %Synchronizing power
-    Pel(i+1) = Ep*V_IB/Xeq*sin(delta(i+1)) + D*(w(i+1)-1); %Electrical power
+    Pse(i+1) = Ep*(V_IB/Xeq)*sin(delta(i+1)); %Synchronizing power
+    Pel(i+1) = Ep*(V_IB/Xeq)*sin(delta(i+1)) + D*(w(i+1)-1); %Electrical power
     i = i+1;
 end
 
 % figure, plot(time_elapsed, delta), title('Angle vs Time'), xlabel('Time(s)'), ylabel('Angle')
 % figure, plot(time_elapsed, w), title('Speed vs Time'), xlabel('Time(s)'), ylabel('Speed')
 % figure, plot(time_elapsed, Pel), title('Electrical Power vs Time'), xlabel('Time(s)'), ylabel('Electrical Power')
-figure, plot(delta, Pel), title('Electrical Power vs Angle'), xlabel('Angle'), ylabel('Electrical Power')
-xlim([-100, 100])
+
+plot(time_elapsed, Pel), title('Electrical Power vs Time'), xlabel('Time(s)'), ylabel('Electrical Power(VA)')
+% plot(time_elapsed, w), title('Speed vs Time'), xlabel('Time(s)'), ylabel('Speed(rad/s)')
+
+% plot(time_elapsed, delta), title('Angle vs Time'), xlabel('Time(s)'), ylabel('Angle (Radians)')
+
+
+% xlim([-100, 100])
 % plot(log(time_elapsed), Pel)
 
 

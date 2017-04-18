@@ -15,7 +15,7 @@ delta(1) = delta_0;
 
 %Simulation parameters:
 dt = 0.001;
-t_fin = 20 ;
+t_fin = 0.5 ;
 i = 1;
 time_elapsed = 0:dt:t_fin+dt;
 Pe = 0;
@@ -43,13 +43,7 @@ for t = 0:dt:t_fin
 end
 
 %Energy calculation
-disp('Kinetic energy')
-Wk = H*w0*(w-1).^2 %Kinetic energy
-disp('Potential energy')
-Wp = -(Pm*(delta-delta_0)+Ep*V_IB/Xeq*(cos(delta)-cos(delta_0))) %Potential energy
 
-W_tot= Wp +Wk; 
-plot(time_elapsed, Wk)
-
-
+Wk = H*w0*(w-1).^2; %Kinetic energy
+Wp = -(Pm*(delta-delta_0)+Ep*V_IB/Xeq*(cos(delta)-cos(delta_0))); %Potential energy
 

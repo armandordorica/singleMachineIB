@@ -13,7 +13,7 @@
 clear all
 clear vars 
 %Input your data here
-S_IB = 0.93 +0.27i ;  
+S_IB = 0.186+0.054i ;  
 V_IB = 1.03 ;
 % V_IB = 0.001 ;
 Xp = 0.2 ;  

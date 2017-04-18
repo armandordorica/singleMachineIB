@@ -92,10 +92,10 @@ PmArray = ones(1,100)*Pm;
 %   plot(time_elapsed, delta), xlabel('Time(s)'), ylabel('Rotor Angle'), title('Angle vs time when mechanical power is 100% of the steady state limit') 
 % plot(time_elapsed, w), xlabel('Time(s)'), ylabel('Speed'), title('Speed vs time when mechanical power is 100% of the steady state limit') 
 %    plot(time_elapsed, Pel), xlabel('Time(s)'), ylabel('Electrical Power'), title('Electrical Power vs time when mechanical power is 100% of the steady state limit') 
-plot(delta, Pel, x, PmArray), xlabel('Rotor Angle)'), ylabel('Electrical Power'), title('Electrical Power vs rotor angle when mechanical power is 100% of the steady state limit') 
-% plot( delta, time_elapsed), ylabel('Time(s)'), xlabel('Rotor Angle'), title('Time vs Rotor Angle when mechanical power is 100% of the steady state limit') 
+% plot(delta, Pel), xlabel('Rotor Angle)'), ylabel('Electrical Power'), title('Electrical Power vs rotor angle when mechanical power is 100% of the steady state limit') 
+plot( delta, time_elapsed), ylabel('Time(s)'), xlabel('Rotor Angle'), title('Time vs rotor  when mechanical power is 100% of the steady state limit') 
 % 
-xlim([0,3.5])
+% xlim([0,3.5])
 % ylim([0,5])
 % hold on; 
 % plot (x,y)
